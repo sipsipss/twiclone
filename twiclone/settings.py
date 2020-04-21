@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # 3rd party apps
     'rest_framework',  # u know what it is
     'phonenumber_field',  # phone number field for model
+    'imagekit', # image library
 ]
 
 MIDDLEWARE = [
@@ -125,4 +126,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# media thing
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
+
+# phonenumber thing
+PHONENUMBER_DEFAULT_REGION = 'ID'
+
