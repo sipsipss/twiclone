@@ -1,0 +1,18 @@
+-i https://pypi.org/simple
+asgiref==3.2.7
+babel==2.8.0
+bcrypt==3.1.7
+cffi==1.14.0
+django-appconf==1.0.4
+django-imagekit==4.0.2
+django-phonenumber-field[phonenumbers]==4.0.0
+django==3.0.6
+djangorestframework==3.11.0
+drf-rw-serializers==1.0.3
+phonenumbers==8.12.4
+pilkit==2.0
+pillow==7.1.2
+pycparser==2.20
+pytz==2020.1
+six==1.14.0
+sqlparse==0.3.1

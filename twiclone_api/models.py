@@ -22,7 +22,7 @@ class User(AbstractUser):
 
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['email']
+    REQUIRED_FIELDS = ['email', 'password']
 
     class Meta:
         ordering = ['-create_date']
@@ -44,13 +44,17 @@ class UserProfile(models.Model):
     website = models.CharField(max_length=100, null=True, blank=True)
     birth_date = models.DateField(null=True, blank=True)
     create_date = models.DateField(auto_now_add=True)
+    follows = models.ManyToManyField('UserProfile', related_name='followed_by', null=True, blank=True)
 
     class Meta:
         ordering = ['-create_date']
 
+    def __str__(self):
+        return self.name
+
 
 class UserTweet(models.Model):
+    username = models.ForeignKey(User,
+                                 on_delete=models.CASCADE)
     tweet = models.CharField(max_length=280)
-    retweet = models.PositiveIntegerField()
-    like = models.PositiveIntegerField()
     create_date = models.DateTimeField(auto_now_add=True)

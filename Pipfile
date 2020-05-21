@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+djangorestframework = "*"
+django-phonenumber-field = {extras = ["phonenumbers"],version = "*"}
+pillow = "*"
+django-imagekit = "*"
+drf-rw-serializers = "*"
+bcrypt = "*"
+markdown = "*"
+
+[requires]
+python_version = "3.7"
