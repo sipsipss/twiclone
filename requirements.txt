@@ -11,7 +11,7 @@ djangorestframework==3.11.0
 drf-rw-serializers==1.0.3
 phonenumbers==8.12.4
 pilkit==2.0
-pillow==7.1.2
+pillow==9.3.0
 pycparser==2.20
 pytz==2020.1
 six==1.14.0
